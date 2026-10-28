@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A clear, accessible online voting and polling experience." />
+  <title>Ballot — Online Voting & Polling</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Ballot home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>ballot<span class="brand-dot">.</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="primary-menu">
+        <div class="nav-links">
+          <a href="home/elections.html">Elections</a>
+          <a href="home/polls.html">Polls</a>
+          <a href="home/results.html">Results</a>
+        </div>
+        <div class="nav-actions">
+          <a class="login-link" href="home/login.html">Log in</a>
+          <a class="button button-small" href="home/register.html">Get started <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> Your voice, made count</div>
+        <h1>Every voice<br />moves us <span>forward.</span></h1>
+        <p class="hero-description">A simpler way to take part. Explore elections, cast your vote, and share your opinion in one easy-to-use place.</p>
+        <div class="hero-actions">
+          <a class="button" href="home/elections.html">Explore elections <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="home/polls.html">Browse community polls <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note"><span class="check-icon" aria-hidden="true">✓</span> Clear. Accessible. Built for participation.</div>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration of a ballot being placed in a secure ballot box" role="img">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="sparkle sparkle-one">✳</div>
+        <div class="sparkle sparkle-two">✦</div>
+        <div class="ballot-card">
+          <div class="ballot-card-top"><span class="mini-brand-mark">B</span><span class="card-label">YOUR BALLOT</span><span class="card-menu">•••</span></div>
+          <div class="card-rule"></div>
+          <div class="candidate-row"><span class="candidate-avatar avatar-one">JD</span><span class="candidate-lines"><i></i><i></i></span><span class="radio selected"><b></b></span></div>
+          <div class="candidate-row"><span class="candidate-avatar avatar-two">AM</span><span class="candidate-lines"><i></i><i></i></span><span class="radio"></span></div>
+          <div class="candidate-row"><span class="candidate-avatar avatar-three">RK</span><span class="candidate-lines"><i></i><i></i></span><span class="radio"></span></div>
+          <div class="ballot-submit"><span>Vote submitted</span><span class="submit-check">✓</span></div>
+        </div>
+        <div class="secure-tag"><span class="secure-icon" aria-hidden="true">✓</span><span><strong>Your choice</strong><small>is yours alone</small></span></div>
+        <div class="art-caption">A better way to be heard.</div>
+      </div>
+    </section>
+
+    <section class="feature-strip" aria-label="Platform features">
+      <div class="container feature-grid">
+        <article class="feature-item">
+          <span class="feature-icon icon-purple" aria-hidden="true">◎</span>
+          <div><h2>Easy to take part</h2><p>Find active elections and polls in one place.</p></div>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon icon-peach" aria-hidden="true">↗</span>
+          <div><h2>Results at a glance</h2><p>Follow outcomes with clear, simple summaries.</p></div>
+        </article>
+        <article class="feature-item">
+          <span class="feature-icon icon-green" aria-hidden="true">◇</span>
+          <div><h2>Made for everyone</h2><p>A straightforward experience on any screen.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bottom-cta container">
+      <div>
+        <p class="section-kicker">MAKE YOUR VOICE COUNT</p>
+        <h2>Ready to take part?</h2>
+        <p>Create an account to explore the voting experience.</p>
+      </div>
+      <a class="button" href="home/register.html">Create your account <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">B</span><span>ballot<span class="brand-dot">.</span></span></a>
+      <p>Participation starts with you.</p>
+      <span class="copyright">© <span id="current-year"></span> Ballot</span>
+    </div>
+  </footer>
+</body>
+</html>

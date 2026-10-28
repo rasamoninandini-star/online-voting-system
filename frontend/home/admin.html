@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manage sample community elections on Ballot." />
+  <title>Administration | Ballot</title>
+  <link rel="stylesheet" href="admin.css" />
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="Ballot home"><span class="brand-mark" aria-hidden="true">B</span><span>ballot<span class="brand-dot">.</span></span></a>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span>Overview</a>
+        <a class="nav-item" href="elections.html"><span class="nav-icon" aria-hidden="true">▤</span>Elections</a>
+        <a class="nav-item" href="polls.html"><span class="nav-icon" aria-hidden="true">◉</span>Community polls</a>
+        <a class="nav-item" href="results.html"><span class="nav-icon" aria-hidden="true">▥</span>Results</a>
+      </nav>
+      <p class="nav-label account-label">ACCOUNT</p>
+      <nav class="side-nav"><a class="nav-item" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a></nav>
+      <p class="nav-label admin-label">MANAGEMENT</p>
+      <nav class="side-nav"><a class="nav-item active" href="admin.html" aria-current="page"><span class="nav-icon" aria-hidden="true">⚙</span>Administration</a></nav>
+      <div class="sidebar-bottom"><div class="help-card"><span class="help-icon" aria-hidden="true">!</span><strong>Demo controls</strong><p>Changes here are only saved in this browser session.</p><a href="elections.html">View elections <span aria-hidden="true">→</span></a></div><a class="sidebar-link" href="../index.html"><span aria-hidden="true">↩</span> Back to website</a></div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><span></span><span></span><span></span></button>
+        <div class="breadcrumb">Management <span aria-hidden="true">/</span> <strong>Administration</strong></div>
+        <a class="profile-shortcut" href="profile.html" aria-label="View your profile"><span class="avatar">JD</span><span class="profile-name">Jordan Davis</span><span class="chevron" aria-hidden="true">⌄</span></a>
+      </header>
+      <main class="page-content">
+        <section class="page-heading"><div><p class="eyebrow"><span class="status-dot"></span> MANAGEMENT WORKSPACE</p><h1>Administration</h1><p class="intro">Review election activity and create sample election listings.</p></div><span class="demo-badge">DEMO ADMIN</span></section>
+        <section class="metrics-grid" aria-label="Sample platform activity">
+          <article class="metric-card"><span class="metric-icon purple-icon" aria-hidden="true">▤</span><div><p class="metric-number" id="active-count">3</p><p class="metric-label">Open elections</p></div><span class="metric-note">CURRENT</span></article>
+          <article class="metric-card"><span class="metric-icon green-icon" aria-hidden="true">♙</span><div><p class="metric-number">517</p><p class="metric-label">Total participants</p></div><span class="metric-note">SAMPLE</span></article>
+          <article class="metric-card"><span class="metric-icon peach-icon" aria-hidden="true">◉</span><div><p class="metric-number">3</p><p class="metric-label">Community polls</p></div><span class="metric-note">SAMPLE</span></article>
+        </section>
+        <div class="admin-layout">
+          <section class="panel elections-panel" aria-labelledby="manage-title">
+            <div class="panel-heading"><div><p class="section-kicker">OVERVIEW</p><h2 id="manage-title">Election listings</h2></div><span class="listing-count" id="listing-count">4 elections</span></div>
+            <div class="filter-row" role="group" aria-label="Filter elections by status"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-button" type="button" data-filter="open" aria-pressed="false">Open</button><button class="filter-button" type="button" data-filter="upcoming" aria-pressed="false">Coming soon</button></div>
+            <div class="listing-list" id="listing-list" aria-live="polite">
+              <article class="listing-row" data-status="open"><span class="listing-mark purple-mark" aria-hidden="true">CC</span><div class="listing-info"><strong>Community Council Election</strong><small>Community · Closes in 3 days</small></div><span class="status-tag open-tag">Open</span></article>
+              <article class="listing-row" data-status="open"><span class="listing-mark peach-mark" aria-hidden="true">PA</span><div class="listing-info"><strong>Park Improvement Priorities</strong><small>Local projects · Closes in 6 days</small></div><span class="status-tag open-tag">Open</span></article>
+              <article class="listing-row" data-status="open"><span class="listing-mark green-mark" aria-hidden="true">SR</span><div class="listing-info"><strong>Student Representative Vote</strong><small>Education · Closes in 9 days</small></div><span class="status-tag open-tag">Open</span></article>
+              <article class="listing-row" data-status="upcoming"><span class="listing-mark blue-mark" aria-hidden="true">CG</span><div class="listing-info"><strong>Community Garden Planning</strong><small>Community · Opens in 5 days</small></div><span class="status-tag upcoming-tag">Coming soon</span></article>
+            </div>
+            <p class="empty-state" id="empty-state" hidden>No elections match this status.</p>
+          </section>
+          <section class="panel create-panel" aria-labelledby="create-title">
+            <p class="section-kicker">QUICK ACTION</p><h2 id="create-title">Create an election</h2><p class="panel-intro">Add a sample election to this page. It won’t be published to a real service.</p>
+            <form id="create-form">
+              <label class="field-label" for="election-name">Election name<input id="election-name" name="name" type="text" placeholder="e.g. Neighborhood priorities" required maxlength="90" /></label>
+              <label class="field-label" for="election-category">Category<select id="election-category" name="category"><option>Community</option><option>Local projects</option><option>Education</option></select></label>
+              <label class="field-label" for="election-date">Voting closes<input id="election-date" name="closeDate" type="date" required /></label>
+              <button class="button" type="submit">Add election <span aria-hidden="true">→</span></button>
+              <p class="form-message" id="admin-message" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+        <p class="security-note"><strong>Demo limitation:</strong> This page has no role verification or server connection. Real administrative actions need secure authentication, authorization, and persistent storage.</p>
+        <footer class="page-footer"><span>© <span id="current-year"></span> Ballot</span><span>Clear. Accessible. Built for participation.</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-overlay" hidden></div>
+</body>
+</html>

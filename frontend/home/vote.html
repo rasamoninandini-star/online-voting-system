@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Review the Community Council Election and submit your vote." />
+  <title>Cast your vote | Ballot</title>
+  <link rel="stylesheet" href="vote.css" />
+  <script src="vote.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="Ballot home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>ballot<span class="brand-dot">.</span></span>
+      </a>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span>Overview</a>
+        <a class="nav-item active" href="elections.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▤</span>Elections</a>
+        <a class="nav-item" href="polls.html"><span class="nav-icon" aria-hidden="true">◉</span>Community polls</a>
+        <a class="nav-item" href="results.html"><span class="nav-icon" aria-hidden="true">▥</span>Results</a>
+      </nav>
+
+      <p class="nav-label account-label">ACCOUNT</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <strong>Need a hand?</strong>
+          <p>Your vote is yours alone. Review your choice before submitting.</p>
+          <a href="elections.html">Back to elections <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="sidebar-link" href="../index.html"><span aria-hidden="true">↩</span> Back to website</a>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="breadcrumb"><a href="dashboard.html">Workspace</a> <span aria-hidden="true">/</span> <a href="elections.html">Elections</a> <span aria-hidden="true">/</span> <strong>Cast your vote</strong></div>
+        <a class="profile-shortcut" href="profile.html" aria-label="View your profile">
+          <span class="avatar">JD</span>
+          <span class="profile-name">Jordan Davis</span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </a>
+      </header>
+
+      <main class="page-content">
+        <a class="back-link" href="elections.html"><span aria-hidden="true">←</span> All elections</a>
+
+        <section class="election-heading" aria-labelledby="page-title">
+          <div class="election-symbol" aria-hidden="true">CC</div>
+          <div>
+            <p class="eyebrow"><span class="status-dot"></span> OPEN · CLOSES IN 3 DAYS</p>
+            <h1 id="page-title">Community Council Election</h1>
+            <p class="intro">Choose one candidate to represent your neighborhood. Your selection is private.</p>
+          </div>
+        </section>
+
+        <div class="voting-layout">
+          <section class="ballot-panel" aria-labelledby="ballot-title">
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">YOUR BALLOT</p>
+                <h2 id="ballot-title">Select one candidate</h2>
+              </div>
+              <span class="step-label">1 selection</span>
+            </div>
+
+            <form id="vote-form">
+              <fieldset class="candidate-list">
+                <legend class="visually-hidden">Choose a candidate for Community Council</legend>
+                <label class="candidate-option">
+                  <input type="radio" name="candidate" value="jordan-lee" required />
+                  <span class="candidate-avatar avatar-purple" aria-hidden="true">JL</span>
+                  <span class="candidate-copy"><strong>Jordan Lee</strong><small>Community organizer · Focused on safer streets and local connections</small></span>
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                </label>
+                <label class="candidate-option">
+                  <input type="radio" name="candidate" value="alex-morgan" />
+                  <span class="candidate-avatar avatar-peach" aria-hidden="true">AM</span>
+                  <span class="candidate-copy"><strong>Alex Morgan</strong><small>Small business owner · Advocating for thriving neighborhood spaces</small></span>
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                </label>
+                <label class="candidate-option">
+                  <input type="radio" name="candidate" value="riley-kim" />
+                  <span class="candidate-avatar avatar-green" aria-hidden="true">RK</span>
+                  <span class="candidate-copy"><strong>Riley Kim</strong><small>Volunteer mentor · Committed to inclusive community programs</small></span>
+                  <span class="radio-indicator" aria-hidden="true"></span>
+                </label>
+              </fieldset>
+
+              <div class="ballot-footer">
+                <p class="privacy-note"><span aria-hidden="true">✓</span> You can only submit one vote in this election.</p>
+                <button class="submit-button" type="submit">Review and submit <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <aside class="info-panel" aria-labelledby="about-title">
+            <div class="info-icon" aria-hidden="true">i</div>
+            <h2 id="about-title">About this election</h2>
+            <p>Help choose the neighborhood representatives who will bring local priorities to the Community Council.</p>
+            <div class="info-stat"><span>Election status</span><strong><span class="status-dot"></span> Voting is open</strong></div>
+            <div class="info-stat"><span>Closes</span><strong>In 3 days</strong></div>
+            <div class="info-stat"><span>Participants</span><strong>248 people</strong></div>
+            <a class="results-link" href="results.html">View election results <span aria-hidden="true">→</span></a>
+          </aside>
+        </div>
+
+        <footer class="page-footer"><span>© <span id="current-year"></span> Ballot</span><span>Clear. Accessible. Built for participation.</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-overlay" hidden></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Log in to your Ballot voting and polling account." />
+  <title>Log in | Ballot</title>
+  <link rel="stylesheet" href="login.css" />
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Ballot home">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span>ballot<span class="brand-dot">.</span></span>
+    </a>
+    <a class="back-link" href="../index.html">← Back to home</a>
+  </header>
+
+  <main class="login-layout">
+    <section class="welcome-panel" aria-labelledby="welcome-title">
+      <div class="welcome-content">
+        <span class="eyebrow"><span class="status-dot"></span> Your voice, made count</span>
+        <h1 id="welcome-title">Good to have you <span>back.</span></h1>
+        <p>Log in to stay up to date with elections, cast your vote, and join the conversation.</p>
+        <div class="welcome-note"><span aria-hidden="true">✓</span> Clear. Accessible. Built for participation.</div>
+      </div>
+      <div class="decorative-orbit orbit-one" aria-hidden="true"></div>
+      <div class="decorative-orbit orbit-two" aria-hidden="true"></div>
+      <div class="decorative-mark" aria-hidden="true">B</div>
+    </section>
+
+    <section class="form-panel" aria-labelledby="login-title">
+      <div class="form-wrap">
+        <p class="section-kicker">WELCOME BACK</p>
+        <h2 id="login-title">Log in to Ballot</h2>
+        <p class="form-intro">Enter your account details to continue.</p>
+
+        <form id="login-form">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+
+          <div class="password-heading">
+            <label for="password">Password</label>
+            <a class="forgot-link" href="#" aria-label="Forgot password?">Forgot password?</a>
+          </div>
+          <div class="password-field">
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="8" />
+            <button class="show-password" type="button" aria-controls="password" aria-pressed="false">Show</button>
+          </div>
+
+          <label class="remember-option" for="remember">
+            <input id="remember" name="remember" type="checkbox" />
+            <span>Remember me</span>
+          </label>
+
+          <button class="submit-button" type="submit">Log in <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="signup-prompt">New to Ballot? <a href="register.html">Create an account</a></p>
+        <p class="security-note"><span aria-hidden="true">✓</span> Your vote is private and your choice is yours alone.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

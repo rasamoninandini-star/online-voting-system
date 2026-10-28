@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse active and upcoming community elections on Ballot." />
+  <title>Elections | Ballot</title>
+  <link rel="stylesheet" href="elections.css" />
+  <script src="elections.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="Ballot home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>ballot<span class="brand-dot">.</span></span>
+      </a>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span>Overview</a>
+        <a class="nav-item active" href="elections.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▤</span>Elections</a>
+        <a class="nav-item" href="polls.html"><span class="nav-icon" aria-hidden="true">◉</span>Community polls</a>
+        <a class="nav-item" href="results.html"><span class="nav-icon" aria-hidden="true">▥</span>Results</a>
+      </nav>
+
+      <p class="nav-label account-label">ACCOUNT</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <strong>Need a hand?</strong>
+          <p>Find answers about voting and polls.</p>
+          <a href="polls.html">Explore community polls <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="sidebar-link" href="../index.html"><span aria-hidden="true">↩</span> Back to website</a>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="breadcrumb">Workspace <span aria-hidden="true">/</span> <strong>Elections</strong></div>
+        <a class="profile-shortcut" href="profile.html" aria-label="View your profile">
+          <span class="avatar">JD</span>
+          <span class="profile-name">Jordan Davis</span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </a>
+      </header>
+
+      <main class="page-content">
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow"><span class="status-dot"></span> YOUR COMMUNITY, YOUR VOICE</p>
+            <h1 id="page-title">Elections</h1>
+            <p class="intro">Explore current elections and make your voice part of the decision.</p>
+          </div>
+          <a class="button" href="results.html">View results <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="elections-section" aria-labelledby="elections-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">FIND YOUR ELECTION</p>
+              <h2 id="elections-title">Elections to explore</h2>
+            </div>
+            <label class="search-box">
+              <span class="visually-hidden">Search elections</span>
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="election-search" type="search" placeholder="Search elections" autocomplete="off" />
+            </label>
+          </div>
+
+          <div class="filter-row" role="group" aria-label="Filter elections by status">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All elections <span>4</span></button>
+            <button class="filter-button" type="button" data-filter="open" aria-pressed="false">Open now <span>3</span></button>
+            <button class="filter-button" type="button" data-filter="upcoming" aria-pressed="false">Coming soon <span>1</span></button>
+          </div>
+
+          <div class="election-list" id="election-list" aria-live="polite">
+            <article class="election-card" data-status="open" data-search="community council election neighborhood representatives local community">
+              <div class="election-mark purple-mark" aria-hidden="true">CC</div>
+              <div class="election-info">
+                <div class="card-title-row"><span class="status-badge open-badge"><span></span> Open</span><span class="category-label">COMMUNITY</span></div>
+                <h3>Community Council Election</h3>
+                <p>Choose your neighborhood representatives and help shape local priorities.</p>
+                <div class="election-meta"><span><span aria-hidden="true">◷</span> Closes in 3 days</span><span><span aria-hidden="true">♙</span> 248 participants</span></div>
+              </div>
+              <a class="outline-button" href="vote.html">View election <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="election-card" data-status="open" data-search="park improvement priorities community project environment">
+              <div class="election-mark peach-mark" aria-hidden="true">PA</div>
+              <div class="election-info">
+                <div class="card-title-row"><span class="status-badge open-badge"><span></span> Open</span><span class="category-label">LOCAL PROJECTS</span></div>
+                <h3>Park Improvement Priorities</h3>
+                <p>Help decide which improvements should be made to our neighborhood park.</p>
+                <div class="election-meta"><span><span aria-hidden="true">◷</span> Closes in 6 days</span><span><span aria-hidden="true">♙</span> 173 participants</span></div>
+              </div>
+              <a class="outline-button" href="vote.html">View election <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="election-card" data-status="open" data-search="student representative vote school student leadership">
+              <div class="election-mark green-mark" aria-hidden="true">SR</div>
+              <div class="election-info">
+                <div class="card-title-row"><span class="status-badge open-badge"><span></span> Open</span><span class="category-label">EDUCATION</span></div>
+                <h3>Student Representative Vote</h3>
+                <p>Select this year’s student representative and choose who speaks for your class.</p>
+                <div class="election-meta"><span><span aria-hidden="true">◷</span> Closes in 9 days</span><span><span aria-hidden="true">♙</span> 96 participants</span></div>
+              </div>
+              <a class="outline-button" href="vote.html">View election <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="election-card" data-status="upcoming" data-search="community garden planning upcoming neighborhood environment">
+              <div class="election-mark blue-mark" aria-hidden="true">CG</div>
+              <div class="election-info">
+                <div class="card-title-row"><span class="status-badge upcoming-badge"><span></span> Coming soon</span><span class="category-label">COMMUNITY</span></div>
+                <h3>Community Garden Planning</h3>
+                <p>Vote on the layout and shared features for our new community garden.</p>
+                <div class="election-meta"><span><span aria-hidden="true">◷</span> Opens in 5 days</span><span><span aria-hidden="true">♙</span> Registration open</span></div>
+              </div>
+              <a class="outline-button" href="vote.html">View details <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+          <p class="empty-state" id="empty-state" hidden>No elections match your search. Try another keyword or filter.</p>
+        </section>
+
+        <footer class="page-footer"><span>© <span id="current-year"></span> Ballot</span><span>Clear. Accessible. Built for participation.</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-overlay" hidden></div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse community polls and share your opinion." />
+  <title>Community polls | Ballot</title>
+  <link rel="stylesheet" href="polls.css" />
+  <script src="polls.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="Ballot home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>ballot<span class="brand-dot">.</span></span>
+      </a>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span>Overview</a>
+        <a class="nav-item" href="elections.html"><span class="nav-icon" aria-hidden="true">▤</span>Elections</a>
+        <a class="nav-item active" href="polls.html" aria-current="page"><span class="nav-icon" aria-hidden="true">◉</span>Community polls</a>
+        <a class="nav-item" href="results.html"><span class="nav-icon" aria-hidden="true">▥</span>Results</a>
+      </nav>
+
+      <p class="nav-label account-label">ACCOUNT</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <strong>Need a hand?</strong>
+          <p>Find answers about voting and polls.</p>
+          <a href="elections.html">Explore elections <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="sidebar-link" href="../index.html"><span aria-hidden="true">↩</span> Back to website</a>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="breadcrumb"><a href="dashboard.html">Workspace</a> <span aria-hidden="true">/</span> <strong>Community polls</strong></div>
+        <a class="profile-shortcut" href="profile.html" aria-label="View your profile">
+          <span class="avatar">JD</span>
+          <span class="profile-name">Jordan Davis</span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </a>
+      </header>
+
+      <main class="page-content">
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow"><span class="status-dot"></span> EVERY OPINION HELPS</p>
+            <h1 id="page-title">Community polls</h1>
+            <p class="intro">Share what matters to you and see what your neighbors think.</p>
+          </div>
+          <a class="button" href="elections.html">Explore elections <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="polls-section" aria-labelledby="polls-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">HAVE YOUR SAY</p>
+              <h2 id="polls-title">Polls from your community</h2>
+            </div>
+            <span class="poll-count" id="poll-count">3 polls</span>
+          </div>
+
+          <div class="filter-row" role="group" aria-label="Filter polls by status">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All polls</button>
+            <button class="filter-button" type="button" data-filter="open" aria-pressed="false">Open now</button>
+            <button class="filter-button" type="button" data-filter="closed" aria-pressed="false">Closed</button>
+          </div>
+
+          <div class="poll-list" id="poll-list" aria-live="polite">
+            <article class="poll-card" data-status="open" data-poll-id="community-event">
+              <div class="poll-card-heading">
+                <div class="poll-icon purple-icon" aria-hidden="true">◉</div>
+                <div class="poll-title-wrap">
+                  <div class="poll-meta"><span class="status-badge open-badge"><span></span> Open</span><span class="category-label">COMMUNITY EVENTS</span></div>
+                  <h3>What should our next community event be?</h3>
+                </div>
+                <span class="vote-count">128 votes</span>
+              </div>
+              <p class="poll-description">Help us plan a get-together everyone can enjoy.</p>
+              <form class="poll-form" data-poll-id="community-event">
+                <fieldset class="poll-options">
+                  <legend class="visually-hidden">Choose an event</legend>
+                  <label class="poll-option"><input type="radio" name="community-event" value="movie" required /><span class="option-label">Outdoor movie night</span><span class="option-results" aria-hidden="true"><span class="option-percent">42%</span><span class="poll-track"><i style="width:42%"></i></span></span></label>
+                  <label class="poll-option"><input type="radio" name="community-event" value="market" /><span class="option-label">Weekend market</span><span class="option-results" aria-hidden="true"><span class="option-percent">35%</span><span class="poll-track"><i style="width:35%"></i></span></span></label>
+                  <label class="poll-option"><input type="radio" name="community-event" value="picnic" /><span class="option-label">Community picnic</span><span class="option-results" aria-hidden="true"><span class="option-percent">23%</span><span class="poll-track"><i style="width:23%"></i></span></span></label>
+                </fieldset>
+                <div class="poll-actions"><span class="poll-message" role="status" aria-live="polite"></span><button class="vote-button" type="submit">Submit vote <span aria-hidden="true">→</span></button></div>
+              </form>
+              <p class="poll-footer">Closes in 2 days <span aria-hidden="true">·</span> One response per browser</p>
+            </article>
+
+            <article class="poll-card" data-status="open" data-poll-id="park-hours">
+              <div class="poll-card-heading">
+                <div class="poll-icon peach-icon" aria-hidden="true">☀</div>
+                <div class="poll-title-wrap">
+                  <div class="poll-meta"><span class="status-badge open-badge"><span></span> Open</span><span class="category-label">LOCAL PROJECTS</span></div>
+                  <h3>When would you use extended park hours?</h3>
+                </div>
+                <span class="vote-count">86 votes</span>
+              </div>
+              <p class="poll-description">Your feedback will help guide a seasonal trial of later opening hours.</p>
+              <form class="poll-form" data-poll-id="park-hours">
+                <fieldset class="poll-options">
+                  <legend class="visually-hidden">Choose preferred park hours</legend>
+                  <label class="poll-option"><input type="radio" name="park-hours" value="weekday" required /><span class="option-label">Weekday evenings</span><span class="option-results" aria-hidden="true"><span class="option-percent">51%</span><span class="poll-track"><i style="width:51%"></i></span></span></label>
+                  <label class="poll-option"><input type="radio" name="park-hours" value="weekend" /><span class="option-label">Weekend mornings</span><span class="option-results" aria-hidden="true"><span class="option-percent">31%</span><span class="poll-track"><i style="width:31%"></i></span></span></label>
+                  <label class="poll-option"><input type="radio" name="park-hours" value="both" /><span class="option-label">Both</span><span class="option-results" aria-hidden="true"><span class="option-percent">18%</span><span class="poll-track"><i style="width:18%"></i></span></span></label>
+                </fieldset>
+                <div class="poll-actions"><span class="poll-message" role="status" aria-live="polite"></span><button class="vote-button" type="submit">Submit vote <span aria-hidden="true">→</span></button></div>
+              </form>
+              <p class="poll-footer">Closes in 5 days <span aria-hidden="true">·</span> One response per browser</p>
+            </article>
+
+            <article class="poll-card closed-card" data-status="closed" data-poll-id="garden-features">
+              <div class="poll-card-heading">
+                <div class="poll-icon green-icon" aria-hidden="true">✿</div>
+                <div class="poll-title-wrap">
+                  <div class="poll-meta"><span class="status-badge closed-badge"><span></span> Results</span><span class="category-label">COMMUNITY GARDEN</span></div>
+                  <h3>What would you most like to grow in the community garden?</h3>
+                </div>
+                <span class="vote-count">204 votes</span>
+              </div>
+              <p class="poll-description">Thanks to everyone who shared their ideas. The poll is now closed.</p>
+              <div class="poll-options results-only" aria-label="Final poll results">
+                <div class="result-option"><span class="option-label">Fresh vegetables</span><span class="option-percent">58%</span><span class="poll-track"><i style="width:58%"></i></span></div>
+                <div class="result-option"><span class="option-label">Herbs</span><span class="option-percent">27%</span><span class="poll-track"><i style="width:27%"></i></span></div>
+                <div class="result-option"><span class="option-label">Flowers</span><span class="option-percent">15%</span><span class="poll-track"><i style="width:15%"></i></span></div>
+              </div>
+              <p class="poll-footer">Poll closed <span aria-hidden="true">·</span> Final results</p>
+            </article>
+          </div>
+          <p class="empty-state" id="empty-state" hidden>No polls found in this category.</p>
+        </section>
+
+        <footer class="page-footer"><span>© <span id="current-year"></span> Ballot</span><span>Clear. Accessible. Built for participation.</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-overlay" hidden></div>
+</body>
+</html>

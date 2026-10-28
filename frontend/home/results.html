@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore community election results and participation." />
+  <title>Results | Ballot</title>
+  <link rel="stylesheet" href="results.css" />
+  <script src="results.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="Ballot home"><span class="brand-mark" aria-hidden="true">B</span><span>ballot<span class="brand-dot">.</span></span></a>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span>Overview</a>
+        <a class="nav-item" href="elections.html"><span class="nav-icon" aria-hidden="true">▤</span>Elections</a>
+        <a class="nav-item" href="polls.html"><span class="nav-icon" aria-hidden="true">◉</span>Community polls</a>
+        <a class="nav-item active" href="results.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▥</span>Results</a>
+      </nav>
+      <p class="nav-label account-label">ACCOUNT</p>
+      <nav class="side-nav"><a class="nav-item" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a></nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>See how your community made its choice.</p><a href="elections.html">Explore elections <span aria-hidden="true">→</span></a></div>
+        <a class="sidebar-link" href="../index.html"><span aria-hidden="true">↩</span> Back to website</a>
+      </div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><span></span><span></span><span></span></button>
+        <div class="breadcrumb">Workspace <span aria-hidden="true">/</span> <strong>Results</strong></div>
+        <a class="profile-shortcut" href="profile.html" aria-label="View your profile"><span class="avatar">JD</span><span class="profile-name">Jordan Davis</span><span class="chevron" aria-hidden="true">⌄</span></a>
+      </header>
+      <main class="page-content">
+        <section class="page-heading"><div><p class="eyebrow"><span class="status-dot"></span> COMMUNITY DECISIONS</p><h1>Election results</h1><p class="intro">See how your neighbors voted and what your participation made possible.</p></div><a class="button" href="elections.html">Explore elections <span aria-hidden="true">→</span></a></section>
+        <section class="results-section" aria-labelledby="results-title">
+          <div class="section-heading"><div><p class="section-kicker">TRANSPARENT BY DESIGN</p><h2 id="results-title">Recent results</h2></div><span class="result-count" id="result-count">3 results</span></div>
+          <div class="filter-row" role="group" aria-label="Filter results by category">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All results</button>
+            <button class="filter-button" type="button" data-filter="community" aria-pressed="false">Community</button>
+            <button class="filter-button" type="button" data-filter="local" aria-pressed="false">Local projects</button>
+            <button class="filter-button" type="button" data-filter="education" aria-pressed="false">Education</button>
+          </div>
+          <div class="result-list" id="result-list" aria-live="polite">
+            <article class="result-card" data-category="community">
+              <div class="result-heading"><div class="result-mark purple-mark" aria-hidden="true">CC</div><div class="result-title"><span class="category-label">COMMUNITY · CLOSED</span><h3>Community Council Election</h3><p>Final results · 312 total votes</p></div><span class="winner-label">Winner: Jordan Lee</span></div>
+              <div class="result-rows" aria-label="Vote totals"><div class="result-row"><div class="candidate-line"><span>Jordan Lee</span><strong>46% <small>144 votes</small></strong></div><div class="bar-track"><span class="bar purple-bar" style="width:46%"></span></div></div><div class="result-row"><div class="candidate-line"><span>Alex Morgan</span><strong>34% <small>106 votes</small></strong></div><div class="bar-track"><span class="bar peach-bar" style="width:34%"></span></div></div><div class="result-row"><div class="candidate-line"><span>Riley Kim</span><strong>20% <small>62 votes</small></strong></div><div class="bar-track"><span class="bar green-bar" style="width:20%"></span></div></div></div>
+            </article>
+            <article class="result-card" data-category="local">
+              <div class="result-heading"><div class="result-mark peach-mark" aria-hidden="true">PA</div><div class="result-title"><span class="category-label">LOCAL PROJECTS · CLOSED</span><h3>Park Improvement Priorities</h3><p>Final results · 198 total votes</p></div><span class="winner-label">Top choice: Native garden</span></div>
+              <div class="result-rows" aria-label="Vote totals"><div class="result-row"><div class="candidate-line"><span>Native garden beds</span><strong>52% <small>103 votes</small></strong></div><div class="bar-track"><span class="bar purple-bar" style="width:52%"></span></div></div><div class="result-row"><div class="candidate-line"><span>More seating</span><strong>29% <small>57 votes</small></strong></div><div class="bar-track"><span class="bar peach-bar" style="width:29%"></span></div></div><div class="result-row"><div class="candidate-line"><span>Play area updates</span><strong>19% <small>38 votes</small></strong></div><div class="bar-track"><span class="bar green-bar" style="width:19%"></span></div></div></div>
+            </article>
+            <article class="result-card" data-category="education">
+              <div class="result-heading"><div class="result-mark green-mark" aria-hidden="true">SR</div><div class="result-title"><span class="category-label">EDUCATION · CLOSED</span><h3>Student Representative Vote</h3><p>Final results · 154 total votes</p></div><span class="winner-label">Winner: Sam Patel</span></div>
+              <div class="result-rows" aria-label="Vote totals"><div class="result-row"><div class="candidate-line"><span>Sam Patel</span><strong>41% <small>63 votes</small></strong></div><div class="bar-track"><span class="bar purple-bar" style="width:41%"></span></div></div><div class="result-row"><div class="candidate-line"><span>Taylor Reed</span><strong>36% <small>55 votes</small></strong></div><div class="bar-track"><span class="bar peach-bar" style="width:36%"></span></div></div><div class="result-row"><div class="candidate-line"><span>Casey Nguyen</span><strong>23% <small>36 votes</small></strong></div><div class="bar-track"><span class="bar green-bar" style="width:23%"></span></div></div></div>
+            </article>
+          </div>
+          <p class="empty-state" id="empty-state" hidden>No results in this category yet.</p>
+          <p class="demo-note">These figures are example results for this demo.</p>
+        </section>
+        <footer class="page-footer"><span>© <span id="current-year"></span> Ballot</span><span>Clear. Accessible. Built for participation.</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-overlay" hidden></div>
+</body>
+</html>

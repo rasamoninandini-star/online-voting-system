@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your Ballot voting and polling dashboard." />
+  <title>Dashboard | Ballot</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="Ballot home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>ballot<span class="brand-dot">.</span></span>
+      </a>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-item active" href="dashboard.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▦</span>Overview</a>
+        <a class="nav-item" href="elections.html"><span class="nav-icon" aria-hidden="true">▤</span>Elections</a>
+        <a class="nav-item" href="polls.html"><span class="nav-icon" aria-hidden="true">◉</span>Community polls</a>
+        <a class="nav-item" href="results.html"><span class="nav-icon" aria-hidden="true">▥</span>Results</a>
+      </nav>
+
+      <p class="nav-label account-label">ACCOUNT</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="profile.html"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <strong>Need a hand?</strong>
+          <p>Find answers about voting and polls.</p>
+          <a href="elections.html">Explore elections <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="sidebar-link" href="../index.html"><span aria-hidden="true">↩</span> Back to website</a>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="breadcrumb">Workspace <span aria-hidden="true">/</span> <strong>Overview</strong></div>
+        <div class="topbar-actions">
+          <a class="profile-shortcut" href="profile.html" aria-label="View your profile">
+            <span class="avatar">JD</span>
+            <span class="profile-name">Jordan Davis</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <section class="welcome-row" aria-labelledby="welcome-title">
+          <div>
+            <p class="eyebrow"><span class="status-dot"></span> YOUR PARTICIPATION, AT A GLANCE</p>
+            <h1 id="welcome-title">Welcome back, Jordan<span>.</span></h1>
+            <p class="welcome-text">Here’s what’s happening in your community today.</p>
+          </div>
+          <a class="button" href="elections.html">Explore elections <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="summary-grid" aria-label="Your participation summary">
+          <article class="summary-card">
+            <div class="summary-top"><span class="summary-icon purple-icon" aria-hidden="true">▤</span><span class="summary-caption">OPEN NOW</span></div>
+            <p class="summary-number">03</p>
+            <p class="summary-title">Active elections</p>
+            <a href="elections.html">View elections <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="summary-card">
+            <div class="summary-top"><span class="summary-icon green-icon" aria-hidden="true">✓</span><span class="summary-caption">YOUR ACTIVITY</span></div>
+            <p class="summary-number">02</p>
+            <p class="summary-title">Votes submitted</p>
+            <a href="profile.html">View your activity <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="summary-card">
+            <div class="summary-top"><span class="summary-icon peach-icon" aria-hidden="true">◉</span><span class="summary-caption">COMMUNITY</span></div>
+            <p class="summary-number">05</p>
+            <p class="summary-title">Polls to explore</p>
+            <a href="polls.html">Browse polls <span aria-hidden="true">→</span></a>
+          </article>
+        </section>
+
+        <div class="content-grid">
+          <section class="panel elections-panel" aria-labelledby="elections-heading">
+            <div class="panel-heading">
+              <div><p class="panel-kicker">TAKE PART</p><h2 id="elections-heading">Open elections</h2></div>
+              <a class="view-all" href="elections.html">View all <span aria-hidden="true">→</span></a>
+            </div>
+
+            <article class="election-item">
+              <div class="election-mark purple-mark" aria-hidden="true">CC</div>
+              <div class="election-details"><h3>Community Council Election</h3><p>Choose your neighborhood representatives</p><span class="closing-label"><span class="tiny-dot"></span> Closes in 3 days</span></div>
+              <a class="outline-button" href="vote.html">View election</a>
+            </article>
+            <article class="election-item">
+              <div class="election-mark peach-mark" aria-hidden="true">PA</div>
+              <div class="election-details"><h3>Park Improvement Priorities</h3><p>Help shape the next community project</p><span class="closing-label"><span class="tiny-dot"></span> Closes in 6 days</span></div>
+              <a class="outline-button" href="vote.html">View election</a>
+            </article>
+            <article class="election-item">
+              <div class="election-mark green-mark" aria-hidden="true">SR</div>
+              <div class="election-details"><h3>Student Representative Vote</h3><p>Select this year’s student representative</p><span class="closing-label"><span class="tiny-dot"></span> Closes in 9 days</span></div>
+              <a class="outline-button" href="vote.html">View election</a>
+            </article>
+          </section>
+
+          <aside class="right-column">
+            <section class="panel poll-panel" aria-labelledby="polls-heading">
+              <div class="panel-heading compact-heading">
+                <div><p class="panel-kicker">HAVE YOUR SAY</p><h2 id="polls-heading">Community polls</h2></div>
+                <a class="icon-link" href="polls.html" aria-label="Browse all polls">↗</a>
+              </div>
+              <p class="poll-question">What should our next community event be?</p>
+              <div class="poll-options" aria-label="Poll choices">
+                <div class="poll-option"><span>Outdoor movie night</span><span class="poll-percent">42%</span><span class="poll-track"><i style="width:42%"></i></span></div>
+                <div class="poll-option"><span>Weekend market</span><span class="poll-percent">35%</span><span class="poll-track"><i style="width:35%"></i></span></div>
+                <div class="poll-option"><span>Community picnic</span><span class="poll-percent">23%</span><span class="poll-track"><i style="width:23%"></i></span></div>
+              </div>
+              <p class="poll-footnote">Poll preview · <a href="polls.html">Join the conversation</a></p>
+            </section>
+
+            <section class="participation-card" aria-labelledby="participation-heading">
+              <div class="participation-icon" aria-hidden="true">✦</div>
+              <p class="panel-kicker">YOUR VOICE MATTERS</p>
+              <h2 id="participation-heading">Small choices create a stronger community.</h2>
+              <a href="elections.html">See ways to participate <span aria-hidden="true">→</span></a>
+              <span class="card-decoration" aria-hidden="true">B</span>
+            </section>
+          </aside>
+        </div>
+
+        <footer class="page-footer"><span>© <span id="current-year"></span> Ballot</span><span>Clear. Accessible. Built for participation.</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-overlay" hidden></div>
+</body>
+</html>

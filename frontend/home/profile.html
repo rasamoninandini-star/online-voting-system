@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manage your Ballot profile and participation preferences." />
+  <title>My profile | Ballot</title>
+  <link rel="stylesheet" href="profile.css" />
+  <script src="profile.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+      <a class="brand" href="../index.html" aria-label="Ballot home"><span class="brand-mark" aria-hidden="true">B</span><span>ballot<span class="brand-dot">.</span></span></a>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="side-nav">
+        <a class="nav-item" href="dashboard.html"><span class="nav-icon" aria-hidden="true">▦</span>Overview</a>
+        <a class="nav-item" href="elections.html"><span class="nav-icon" aria-hidden="true">▤</span>Elections</a>
+        <a class="nav-item" href="polls.html"><span class="nav-icon" aria-hidden="true">◉</span>Community polls</a>
+        <a class="nav-item" href="results.html"><span class="nav-icon" aria-hidden="true">▥</span>Results</a>
+      </nav>
+      <p class="nav-label account-label">ACCOUNT</p>
+      <nav class="side-nav"><a class="nav-item active" href="profile.html" aria-current="page"><span class="nav-icon" aria-hidden="true">♙</span>My profile</a></nav>
+      <div class="sidebar-bottom"><div class="help-card"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>Your profile details stay in this browser demo.</p><a href="elections.html">Explore elections <span aria-hidden="true">→</span></a></div><a class="sidebar-link" href="../index.html"><span aria-hidden="true">↩</span> Back to website</a></div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"><span></span><span></span><span></span></button>
+        <div class="breadcrumb">Workspace <span aria-hidden="true">/</span> <strong>My profile</strong></div>
+        <a class="profile-shortcut" href="profile.html" aria-label="View your profile"><span class="avatar">JD</span><span class="profile-name">Jordan Davis</span><span class="chevron" aria-hidden="true">⌄</span></a>
+      </header>
+      <main class="page-content">
+        <section class="page-heading"><div><p class="eyebrow"><span class="status-dot"></span> YOUR ACCOUNT</p><h1>My profile</h1><p class="intro">Keep your details and community updates up to date.</p></div></section>
+        <div class="profile-layout">
+          <section class="profile-panel" aria-labelledby="details-title">
+            <div class="panel-heading"><div><p class="section-kicker">PERSONAL DETAILS</p><h2 id="details-title">Profile information</h2></div><div class="profile-avatar" aria-hidden="true">JD</div></div>
+            <form id="profile-form">
+              <div class="form-grid">
+                <label class="field-label" for="full-name">Full name<input id="full-name" name="fullName" type="text" value="Jordan Davis" autocomplete="name" required maxlength="80" /></label>
+                <label class="field-label" for="email">Email address<input id="email" name="email" type="email" value="jordan.davis@example.com" autocomplete="email" required /></label>
+                <label class="field-label" for="neighborhood">Neighborhood<input id="neighborhood" name="neighborhood" type="text" value="Maplewood" autocomplete="address-level2" maxlength="80" /></label>
+                <label class="field-label" for="timezone">Time zone<select id="timezone" name="timezone"><option value="America/New_York">Eastern Time</option><option value="America/Chicago">Central Time</option><option value="America/Denver">Mountain Time</option><option value="America/Los_Angeles">Pacific Time</option></select></label>
+              </div>
+              <label class="checkbox-row"><input id="updates" name="updates" type="checkbox" checked /><span><strong>Send me community updates</strong><small>Receive occasional notices about elections and polls.</small></span></label>
+              <div class="form-footer"><p id="profile-message" class="form-message" role="status" aria-live="polite"></p><button class="button" type="submit">Save changes <span aria-hidden="true">→</span></button></div>
+            </form>
+          </section>
+          <aside class="side-panel" aria-labelledby="activity-title">
+            <div class="side-icon" aria-hidden="true">✓</div><p class="section-kicker">YOUR PARTICIPATION</p><h2 id="activity-title">A voice in your community</h2>
+            <div class="activity-stat"><span>Votes submitted</span><strong>2</strong></div><div class="activity-stat"><span>Poll responses</span><strong>4</strong></div>
+            <a href="results.html" class="text-link">Explore election results <span aria-hidden="true">→</span></a>
+            <p class="demo-note">Activity numbers are sample content for this demo.</p>
+          </aside>
+        </div>
+        <footer class="page-footer"><span>© <span id="current-year"></span> Ballot</span><span>Clear. Accessible. Built for participation.</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="mobile-overlay" hidden></div>
+</body>
+</html>
